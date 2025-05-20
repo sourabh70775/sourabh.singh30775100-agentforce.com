@@ -1,0 +1,115 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-20-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="slds-box">
+        <p>This is a regular-sized box.</p>
+      </div>
+<lightning-button label="Trigger Click" onclick={createTableDynamically} class="my-button"></lightning-button>
+<lightning-button label="Add colors Click" onclick={createCssDynamically} class="my-button"></lightning-button>
+
+      <table id="pipelineTable">
+        <caption>Sales Pipeline Overview</caption>
+        <thead>
+            <tr>
+                <th data-column-index="0">-</th>
+                <th data-column-index="1" class="classcolor,allthandtd,allth,thhover" colspan="2" >Total Pipeline (inc. Juno)</th>
+                <th data-column-index="2" colspan="2" >Total Pipeline (excl. Juno)</th>
+                <th data-column-index="3" colspan="2" >UK</th>
+                <th data-column-index="4" colspan="2" >Germany</th>
+                <th data-column-index="5" colspan="2" >Ireland</th>
+                <th data-column-index="6" colspan="2" >Vodacom</th>
+                <th data-column-index="7" colspan="2" >Other/Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td class="metric-header">Value (thousands)</td>
+                    <td data-value="2226334" colspan="2"><span class="currency">€</span> 2,226,334</td>
+                    <td data-value="1028034" colspan="2"><span class="currency">€</span> 1,028,034</td>
+                    <td data-value="393376" colspan="2" ><span class="currency">€</span> 393,376</td>
+                    <td data-value="132200" colspan="2" ><span class="currency">€</span> 132,200</td>
+                    <td data-value="204126" colspan="2"><span class="currency">€</span> 204,126</td>
+                    <td data-value="5000" colspan="2"><span class="currency">€</span> 5,000</td>
+                    <td colspan="2" ><span class="currency" >€</span>220,302 </td>
+            </tr>
+            <tr>
+                <td class="metric-header">Won</td>
+                <td data-value="36402" colspan="2" ><span class="currency">€</span> 36,402</td>
+                <td data-value="36402" colspan="2" ><span class="currency">€</span> 36,402</td>
+                <td data-value="0" colspan="2" ><span class="currency">€</span> -</td>
+                <td data-value="34032" colspan="2" ><span class="currency">€</span> 34,032</td>
+                <td data-value="2370" colspan="2" ><span class="currency">€</span> 2,370</td>
+                <td data-value="0" colspan="2" ><span class="currency">€</span> -</td>
+                <td colspan="2" ><span class="currency">€</span> </td>
+            </tr>
+            <tr>
+                <td class="metric-header">Qualified</td>
+                <td data-value="291232"><span class="currency">€</span> 291,232</span></td>
+                <td data-value="291232"><span class="percentage">13%</span></td>
+                <td data-value="291232"><span class="currency">€</span> 291,232</td>
+                <td data-value="291232"><span class="percentage">28%</span></td>
+                <td data-value="17000"><span class="currency">€</span> 17,000</td>
+                <td data-value="17000"><span class="percentage">4%</span></td>
+                <td data-value="105500"><span class="currency">€</span> 105,500</td>
+                <td data-value="105500"><span class="percentage">80%</span></td>
+                <td data-value="54950"><span class="currency">€</span> 54,950</td>
+                <td data-value="54950"><span class="percentage">27%</span></td>
+                <td data-value="5000"><span class="currency">€</span> 5,000</td>
+                <td data-value="5000"><span class="percentage">100%</span></td>
+                <td data-value="108"><span class="currency">€</span> 108</td>
+                <td data-value="108"><span class="percentage">49%</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- HERE WE WILL START MAKING dYNAMIC tABLE-->
+    for Dynamic table
+    <table id="pipelineTableDynamic" data-id="pipelinetable">
+        <thead>
+            <tr>
+                <th  data-id="0-0" data-column-index="0">-</th>
+                <th  data-id="0-1" data-column-index="1" colspan="2" >Total Pipeline (inc. Juno)</th>
+                <th  data-id="0-2" data-column-index="2" colspan="2" >Total Pipeline (excl. Juno)</th>
+                <th  data-id="0-3" data-column-index="3" colspan="2" >UK</th>
+                <th  data-id="0-4" data-column-index="4" colspan="2" >Germany</th>
+                <th  data-id="0-5" data-column-index="5" colspan="2" >Ireland</th>
+                <th  data-id="0-6" data-column-index="6" colspan="2" >Vodacom</th>
+                <th  data-id="0-7" data-column-index="7" colspan="2" >Other/Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td  data-id="1-0" class="metric-header">Value (thousands)</td>
+                    <td  data-id="1-1"  colspan="2"></td>
+                    <td  data-id="1-2"  colspan="2"></td>
+                    <td  data-id="1-3"  colspan="2" ></td>
+                    <td  data-id="1-4"  colspan="2" ></td>
+                    <td  data-id="1-5"  colspan="2"></td>
+                    <td  data-id="1-6"  colspan="2"></td>
+                    <td  data-id="1-7"  colspan="2" ></td>
+            </tr>
+            <tr>
+                    <td  data-id="2-0" class="metric-header">Won</td>
+                    <td  data-id="2-1"  colspan="2"></td>
+                    <td  data-id="2-2"  colspan="2"></td>
+                    <td  data-id="2-3"  colspan="2" ></td>
+                    <td  data-id="2-4"  colspan="2" ></td>
+                    <td  data-id="2-5"  colspan="2"></td>
+                    <td  data-id="2-6"  colspan="2"></td>
+                    <td  data-id="2-7"  colspan="2" ></td>
+            </tr>
+            </tbody>
+    </table>
+
+    <h1>this will be a dynamic table</h1>
+    <table id="pipelineTableDynamicFromJS" data-id="pipelineTableDynamicFromJS">
+        <thead data-id="thead">
+        </thead>
+        <tbody data-id="tbody">
+        </tbody>
+    </table>
+</template>

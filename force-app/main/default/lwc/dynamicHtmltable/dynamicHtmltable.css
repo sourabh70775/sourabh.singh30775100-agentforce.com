@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.metric-header {
+    background-color: #ff3300; /* Orange like in image */
+    color: #333;
+    font-weight: bold;
+    color:#ffffff;
+}
+.currency {
+    /* whitespace: nowrap; */ /* To keep currency and value together if needed */
+}
+.percentage {
+    color: #28a745; /* Green for percentages */
+    font-weight: bold;
+}
+.growth-negative {
+    color: #dc3545; /* Red for negative growth */
+}
+.note {
+    font-size: 0.8em;
+    color: #6c757d;
+}
+caption {
+    caption-side: top;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+    background-color: #dc3545;
+}
+
+.allthandtd{
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+:host .allth {
+    background-color: #000000; /* Light grey for headers */
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    color:#ffffff;
+}
+
+:host .thhover:hover {
+    background-color: #ced4da;
+}
+
+:host .trhovercls:hover {
+    background-color: #e2e6ea;
+}
+
+:host .classcolor{
+    background-color: #043d75;
+}
