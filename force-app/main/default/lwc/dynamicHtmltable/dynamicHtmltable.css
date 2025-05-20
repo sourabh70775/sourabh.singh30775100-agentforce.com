@@ -11,7 +11,44 @@ table {
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     background-color: #fff;
 }
-
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 0.9em;
+}
+th {
+    background-color: #000000; /* Light grey for headers */
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    color:#ffffff;
+    
+}
+th:hover {
+    background-color: #ced4da;
+}
+th.sort-asc::after,
+th.sort-desc::after {
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+}
+th.sort-asc::after {
+    border-bottom-color: #333; /* Arrow up */
+}
+th.sort-desc::after {
+    border-top-color: #333; /* Arrow down */
+}
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+tr:hover {
+    background-color: #e2e6ea;
+}
 .metric-header {
     background-color: #ff3300; /* Orange like in image */
     color: #333;
@@ -39,31 +76,4 @@ caption {
     margin-bottom: 10px;
     color: #007bff;
     background-color: #dc3545;
-}
-
-.allthandtd{
-    border: 1px solid #ddd;
-    padding: 10px 12px;
-    text-align: left;
-    font-size: 0.9em;
-}
-
-:host .allth {
-    background-color: #000000; /* Light grey for headers */
-    color: #000000;
-    cursor: pointer;
-    position: relative;
-    color:#ffffff;
-}
-
-:host .thhover:hover {
-    background-color: #ced4da;
-}
-
-:host .trhovercls:hover {
-    background-color: #e2e6ea;
-}
-
-:host .classcolor{
-    background-color: #043d75;
 }

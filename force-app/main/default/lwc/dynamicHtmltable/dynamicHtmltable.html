@@ -2,15 +2,15 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 05-20-2025
+  @last modified on  : 05-21-2025
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
     <div class="slds-box">
         <p>This is a regular-sized box.</p>
       </div>
-<lightning-button label="Trigger Click" onclick={createTableDynamically} class="my-button"></lightning-button>
-<lightning-button label="Add colors Click" onclick={createCssDynamically} class="my-button"></lightning-button>
+<lightning-button label="Trigger Click" onclick={tableCreationOnDataBasisOfMetaData} class="my-button"></lightning-button>
+<lightning-button label="Add colors Click" onclick={fetchDataForTable} class="my-button"></lightning-button>
 
       <table id="pipelineTable">
         <caption>Sales Pipeline Overview</caption>
@@ -67,7 +67,7 @@
         </tbody>
     </table>
     <!-- HERE WE WILL START MAKING dYNAMIC tABLE-->
-    for Dynamic table
+    <!-- for Dynamic table
     <table id="pipelineTableDynamic" data-id="pipelinetable">
         <thead>
             <tr>
@@ -103,7 +103,7 @@
                     <td  data-id="2-7"  colspan="2" ></td>
             </tr>
             </tbody>
-    </table>
+    </table> -->
 
     <h1>this will be a dynamic table</h1>
     <table id="pipelineTableDynamicFromJS" data-id="pipelineTableDynamicFromJS">
