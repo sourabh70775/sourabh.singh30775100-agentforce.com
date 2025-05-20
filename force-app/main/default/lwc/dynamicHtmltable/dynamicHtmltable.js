@@ -239,27 +239,21 @@ export default class DynamicHtmltable extends LightningElement {
         theadElement.appendChild(trElement);  //adding in theadTag
 
         //creating table data tag
-        let td1 = document.createElement('td');
-        td1.textContent = 'Columns 1';
-        td1.colSpan = 2;
-        td1.setAttribute('data-id', 'NhiBtaauga');
-        trElement.appendChild(td1);
+        let th1 = document.createElement('th');        
+        th1.setAttribute('data-id', 'NhiBtaauga');
+        this.cssUpdateForThElementTH(th1);
+        trElement.appendChild(th1);
        
-        
-
-
         let td2 = document.createElement('td');
         td2.textContent = 'Column 2';
-        td2.classList.add('classcolor','allthandtd','allth','thhover');
         td2.setAttribute('data-id', 'BohoottHogya')
-        td2.colSpan = 2;
+        this.cssUpdateForThElementTD(td2);
         trElement.appendChild(td2);
 
         let td3 = document.createElement('td');
         td3.textContent = 'Column 3';
         td3.classList.add('classcolor');
-        td3.colSpan = 2;
-        td3.style.backgroundColor = 'purple'
+        this.cssUpdateForThElementMetricColumn(td3);
         trElement.appendChild(td3);
        
     }
@@ -285,6 +279,51 @@ export default class DynamicHtmltable extends LightningElement {
         theadElement3.classList.add('metric-header');
         theadElement3.style.backgroundColor = 'purple'
         console.log(theadElement3)
+
+    }
+
+    cssUpdateForThElementTH(element){ //add somevaribale for text content and colSpan
+        console.log("inside createTableDynamically method");
+        // CSS properties applied in JavaScript
+        element.style.border = '1px solid #ddd';       // Border property
+        element.style.padding = '10px 12px';          // Padding
+        element.style.textAlign = 'left';             // Text alignment
+        element.style.fontSize = '0.9em';             // Font size
+        element.style.backgroundColor = '#000000'; // Background color
+        element.style.color = '#ffffff';           // Font color (the later `color` value will override the earlier one)
+        element.style.cursor = 'pointer';         // Pointer cursor on hover
+        element.style.position = 'relative';      // Relative positioning
+        //this will be updated on the basis of the data
+        element.colSpan = 2;
+        element.textContent = 'Table header 1';
+    }
+
+    cssUpdateForThElementTD(element){ //add somevaribale for text content and colSpan
+        console.log("inside createTableDynamically method");
+        // CSS properties applied in JavaScript
+         element.style.border = '1px solid #ddd';       // Border property
+        element.style.padding = '10px 12px';          // Padding
+        element.style.textAlign = 'left';             // Text alignment
+        element.style.fontSize = '0.9em';             // Font size
+         //this will be updated on the basis of the data
+        element.colSpan = 2;
+        element.textContent = 'Table Data 1';
+    }
+    
+    cssUpdateForThElementMetricColumn(element){ //add somevaribale for text content and colSpan
+        console.log("inside createTableDynamically method");
+        // CSS properties applied in JavaScript
+        element.style.border = '1px solid #ddd';       // Border property
+        element.style.padding = '10px 12px';          // Padding
+        element.style.textAlign = 'left';             // Text alignment
+        element.style.fontSize = '0.9em';             // Font size
+        element.style.backgroundColor = '#ff3300'; // Background color (orange)
+        element.style.color = '#ffffff';           // Text color (white overrides the earlier #333)
+        element.style.fontWeight = 'bold';         // Bold text
+        element.colSpan = 2;
+        //this will be updated on the basis of the data
+        element.textContent = 'Table Data 1';
+        // CSS properties applied in JavaScript
 
     }
 
